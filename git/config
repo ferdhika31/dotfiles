@@ -1,0 +1,20 @@
+[user]
+	name = Ferdhika Yudira
+	email = rpl4rt08@gmail.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[url "git@gitlab.playcourt.id:"]
+	insteadOf = https://gitlab.playcourt.id/
+[url "git@git.karismatech.net:"]
+	insteadOf = https://git.karismatech.net/
+[fetch]
+	prune = true
+[pull]
+	ff = only
+[push]
+	default = current
+[alias]
+	done = ! "git default; git pull; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+	default = ! "git switch $(cat $(git rev-parse --git-dir)/refs/remotes/origin/HEAD | cut -d'/' -f4)"
