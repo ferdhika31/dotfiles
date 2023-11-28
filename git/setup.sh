@@ -2,7 +2,7 @@
 
 TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
 
-echo $TIMESTAMP
+echo "Executing git: $TIMESTAMP"
 
 if ! command -v git >/dev/null; then
     echo "git not found; skipping..."
