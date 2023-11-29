@@ -1,0 +1,7 @@
+if ! command -v go >/dev/null; then
+    return
+fi
+
+# Download manual
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"

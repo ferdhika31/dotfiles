@@ -21,3 +21,6 @@ export SAVEHIST=$HISTSIZE
 
 # Setup nvm path
 . $HOME/dotfiles/nvm/export_path
+
+# Setup go path
+. $HOME/dotfiles/go/export_path
