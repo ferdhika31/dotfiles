@@ -9,12 +9,7 @@ if ! command -v zsh >/dev/null; then
     return
 fi
 
-if test -f ./git/zshrc && test -f ~/.zshrc; then
-    echo "zsh found and configured already, skipping..."
-    return
-fi
-
-echo "zsh found and not configured; configuring..."
+echo "zsh found; configuring..."
 
 rm -f ~/.zshrc
 
