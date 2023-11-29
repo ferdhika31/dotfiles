@@ -8,10 +8,13 @@ precmd() {
 }
 
 setopt prompt_subst
-PROMPT='%{$fg[blue]%}[%*]%{$reset_color%} %2~${vcs_info_msg_0_} %# '
+PROMPT='%{$fg[red]%}[%*]%{$reset_color%} %2~${vcs_info_msg_0_} %# '
 
 autoload -Uz compinit && compinit
 autoload -Uz +X bashcompinit && bashcompinit
 
 export HISTSIZE=100000 # default: 1000 as per zsh 5.8 on macOS
 export SAVEHIST=$HISTSIZE
+
+# Setup path nvm
+. $HOME/dotfiles/nvm/export_path

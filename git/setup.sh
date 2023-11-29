@@ -9,16 +9,14 @@ if ! command -v git >/dev/null; then
     return
 fi
 
-CONFIG_HOME=~/
-
-if test ~/dotfiles/git/config -ef $CONFIG_HOME; then
+if test -f ./git/config && test -f ~/.gitconfig; then
     echo "git found and configured already; skipping..."
     return
 fi
 
 echo "git found and not configured; configuring..."
 
-rm -f $CONFIG_HOME.gitconfig
-cp ./git/config $CONFIG_HOME.gitconfig
+rm -f ~/.gitconfig
+cp ./git/config ~/.gitconfig
 
 echo "git found and configured;"
