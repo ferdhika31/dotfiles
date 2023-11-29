@@ -1,0 +1,2 @@
+export HISTSIZE=100000 # default: 1000 as per zsh 5.8 on macOS
+export SAVEHIST=$HISTSIZE

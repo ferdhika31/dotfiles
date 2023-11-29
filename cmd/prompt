@@ -1,0 +1,14 @@
+# Enable color
+autoload -Uz colors && colors
+
+# Enable git
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git*' formats " %{$fg[green]%}(%b)%{$reset_color%}"
+
+precmd() {
+    vcs_info
+}
+
+setopt prompt_subst
+PROMPT='%{$fg[yellow]%}[dika.web.id]%{$fg[red]%}[%*]%{$reset_color%} %2~${vcs_info_msg_0_} %# '
