@@ -16,5 +16,8 @@ autoload -Uz +X bashcompinit && bashcompinit
 export HISTSIZE=100000 # default: 1000 as per zsh 5.8 on macOS
 export SAVEHIST=$HISTSIZE
 
-# Setup path nvm
+# Setup bin path
+. $HOME/dotfiles/bin/export_path
+
+# Setup nvm path
 . $HOME/dotfiles/nvm/export_path
