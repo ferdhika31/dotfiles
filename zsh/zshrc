@@ -10,11 +10,14 @@ precmd() {
 setopt prompt_subst
 PROMPT='%{$fg[red]%}[%*]%{$reset_color%} %2~${vcs_info_msg_0_} %# '
 
-autoload -Uz compinit && compinit
-autoload -Uz +X bashcompinit && bashcompinit
+# Enable Git Tab Autocomplete
+. $HOME/dotfiles/cmd/compgit
 
 export HISTSIZE=100000 # default: 1000 as per zsh 5.8 on macOS
 export SAVEHIST=$HISTSIZE
+
+# Command Alias
+. $HOME/dotfiles/cmd/ls
 
 # Setup bin path
 . $HOME/dotfiles/bin/export_path

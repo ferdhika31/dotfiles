@@ -1,0 +1,4 @@
+# Enable Git Tab Autocomplete for Zsh
+autoload -Uz compinit && compinit
+
+autoload -Uz +X bashcompinit && bashcompinit
