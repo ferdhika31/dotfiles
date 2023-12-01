@@ -11,4 +11,4 @@ precmd() {
 }
 
 setopt prompt_subst
-PROMPT='%{$fg[yellow]%}[dika.web.id]%{$fg[red]%}[%*]%{$reset_color%} %2~${vcs_info_msg_0_} %# '
+PROMPT='%{$fg[cyan]%}[dika.web.id]%{$fg[red]%}[%*]%{$reset_color%} %2~${vcs_info_msg_0_} %# '

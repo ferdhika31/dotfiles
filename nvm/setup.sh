@@ -8,12 +8,12 @@ if test -e ~/.nvm; then
     echo "nvm found and configured already;"
 
     # Setup path nvm
-    . $HOME/dotfiles/nvm/export_path
+    # . $HOME/dotfiles/nvm/export_path
 
-    echo "installing version 16;"
-    nvm install 16
-    echo "installing version 18;"
-    nvm install 18
+    # echo "installing version 16;"
+    # nvm install 16
+    # echo "installing version 18;"
+    # nvm install 18
 
     echo "nvm done; skipping..."
     return
